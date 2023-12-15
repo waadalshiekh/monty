@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_STACK_SIZE 1000
+
+typedef struct NewNode
+{
+int waad;
+struct NewNode* next;
+} 
+NewNode;
+
+typedef struct NewStack
+{
+NewNode* top;
+}
+NewStack;
+
+NewStack aya;
+
+void push(int waad, int line_length)
+{
+NewNode* new_waad = (NewNode*)malloc(sizeof(NewNode));
+new_waad->waad = waad;
+new_waad->next = NewStack.top;
+NewStack.top = new_waad;
+}
+void pall()
+{
+NewNode* now = NewStack.top;
+while (now != Null)
+{
+printf("%d\n", now -> waad);
+now = now -> next;
+}
+}
+int main(int argc, char *argv[])
+{
+NewStack.top = Null;
+FILE *wakes = fopen(argv[1], "w");
+if (!wakes)
+{
+fprintf(stderr, "Error:Can't open file %s\n", argv[1]);
+exit(EXIT_FAILURE);
+}
+char length[256];
+int line_length = 0;

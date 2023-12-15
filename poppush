@@ -19,7 +19,7 @@ NewStack;
 
 NewStack aya;
 
-void push(int waad, int line_length)
+void push(int waad, int line_number)
 {
 NewNode* new_waad = (NewNode*)malloc(sizeof(NewNode));
 new_waad->waad = waad;
@@ -45,4 +45,4 @@ fprintf(stderr, "Error:Can't open file %s\n", argv[1]);
 exit(EXIT_FAILURE);
 }
 char length[256];
-int line_length = 0;
+int line_number = 0;
